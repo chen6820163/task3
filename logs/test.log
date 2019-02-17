@@ -1,0 +1,45 @@
+00:31:12.060 DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+00:31:13.794 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.AuthorServiceImpl.updateAuthor 方法执行耗时：1018 ms
+00:31:13.795 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 45 updateAuthor - 更新成功
+00:31:13.875 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.AuthorServiceImpl.queryAuthorById 方法执行耗时：76 ms
+00:31:13.876 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 54 queryAuthorById - 查询成功
+00:31:13.877 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 55 queryAuthorById - Author{id=1, name='齐大千', tel=18375243639, img='大千', content='齐大千,一个优秀的画家', type=0, status=0, create_at=1547980628313, update_at=1547980628313, created_by='梵高'}
+00:31:14.033 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.AuthorServiceImpl.saveAuthor 方法执行耗时：152 ms
+00:31:14.033 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 26 saveAuthor - 4
+00:31:14.034 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 27 saveAuthor - 1
+00:31:14.116 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.AuthorServiceImpl.deleteAuthorById 方法执行耗时：79 ms
+00:31:14.116 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 36 deleteAuthorById - 删除失败
+00:31:14.182 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.AuthorServiceImpl.queryAuthorsByNameAndStatus 方法执行耗时：44 ms
+00:31:14.182 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 61 queryAuthorsByNameAndStatus - 查询成功
+00:31:14.183 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 64 queryAuthorsByNameAndStatus - Author{id=1, name='齐大千', tel=18375243639, img='大千', content='齐大千,一个优秀的画家', type=0, status=0, create_at=1547980628313, update_at=1547980628313, created_by='梵高'}
+00:31:14.183 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 64 queryAuthorsByNameAndStatus - Author{id=2, name='齐大千', tel=18375243639, img='张大千', content='齐大千,一个优秀的画家', type=0, status=0, create_at=1549989072766, update_at=1549989072766, created_by='梵高'}
+00:31:14.185 INFO  com.jnshu.task3.service.interfaces.IAuthorServiceTest 64 queryAuthorsByNameAndStatus - Author{id=4, name='齐大千', tel=18375243639, img='大千', content='齐大千,一个优秀的画家', type=0, status=0, create_at=1549989073881, update_at=1549989073881, created_by='梵高'}
+00:31:14.327 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.BannerServiceImpl.queryBannersByNameAndStatus 方法执行耗时：61 ms
+00:31:14.328 INFO  com.jnshu.task3.service.interfaces.IBannerServiceTest 76 queryBannersByNameAndStatus - 查询成功
+00:31:14.329 INFO  com.jnshu.task3.service.interfaces.IBannerServiceTest 79 queryBannersByNameAndStatus - Banner{id=15, name='北国风光', img='图片', img_url='url', status=1, create_at=1548215540170, update_at=1548215540170, created_by='梵高'}
+00:31:14.423 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.BannerServiceImpl.updateBanner 方法执行耗时：91 ms
+00:31:14.423 INFO  com.jnshu.task3.service.interfaces.IBannerServiceTest 60 updateBanner - 更新成功
+00:31:14.482 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.BannerServiceImpl.queryBannerById 方法执行耗时：56 ms
+00:31:14.483 INFO  com.jnshu.task3.service.interfaces.IBannerServiceTest 69 queryBannerById - 查询成功
+00:31:14.483 INFO  com.jnshu.task3.service.interfaces.IBannerServiceTest 70 queryBannerById - Banner{id=4, name='雪', img='Snow', img_url='图片url', status=0, create_at=1547971727887, update_at=1547971727887, created_by='梵高'}
+00:31:14.615 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.BannerServiceImpl.saveBanner 方法执行耗时：129 ms
+00:31:14.615 INFO  com.jnshu.task3.service.interfaces.IBannerServiceTest 33 saveBanner - 18
+00:31:14.616 INFO  com.jnshu.task3.service.interfaces.IBannerServiceTest 34 saveBanner - 1
+00:31:14.704 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.BannerServiceImpl.deleteBannerById 方法执行耗时：86 ms
+00:31:14.704 INFO  com.jnshu.task3.service.interfaces.IBannerServiceTest 43 deleteBannerById - 删除失败
+00:31:14.896 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.FirstListServiceImpl.saveFirstList 方法执行耗时：130 ms
+00:31:14.898 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 25 saveFirstList - FirstList{id=17, name='油画', status=0, create_at=1549989074766, update_at=1549989074766, created_by='梵高'}
+00:31:14.898 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 26 saveFirstList - 1
+00:31:14.982 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.FirstListServiceImpl.deleteFirstListById 方法执行耗时：80 ms
+00:31:14.983 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 35 deleteFirstListById - 删除失败
+00:31:15.090 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.FirstListServiceImpl.updateFirstList 方法执行耗时：102 ms
+00:31:15.090 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 46 updateFirstList - 更新失败
+00:31:15.129 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.FirstListServiceImpl.queryFirstListById 方法执行耗时：37 ms
+00:31:15.129 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 53 queryFirstListById - FirstList{id=3, name='油画', status=0, create_at=1548063411662, update_at=1548063411662, created_by='梵高'}
+00:31:15.187 INFO  com.jnshu.task3.common.aop.LoggingAspect 59 printExecTime - *****com.jnshu.task3.service.impl.FirstListServiceImpl.queryFirstListsByNameAndStatus 方法执行耗时：56 ms
+00:31:15.188 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 61 queryFirstListsByNameAndStatus - FirstList{id=2, name='油画', status=0, create_at=1548063229076, update_at=1548063229076, created_by='梵高'}
+00:31:15.189 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 61 queryFirstListsByNameAndStatus - FirstList{id=3, name='油画', status=0, create_at=1548063411662, update_at=1548063411662, created_by='梵高'}
+00:31:15.190 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 61 queryFirstListsByNameAndStatus - FirstList{id=4, name='油画', status=0, create_at=1548063432000, update_at=1548063432000, created_by='梵高'}
+00:31:15.191 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 61 queryFirstListsByNameAndStatus - FirstList{id=5, name='油画', status=0, create_at=1548063448668, update_at=1548063448668, created_by='梵高'}
+00:31:15.192 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 61 queryFirstListsByNameAndStatus - FirstList{id=16, name='油画', status=0, create_at=1549988779796, update_at=1549988779796, created_by='梵高'}
+00:31:15.193 INFO  com.jnshu.task3.service.interfaces.IFirstListServiceTest 61 queryFirstListsByNameAndStatus - FirstList{id=17, name='油画', status=0, create_at=1549989074766, update_at=1549989074766, created_by='梵高'}

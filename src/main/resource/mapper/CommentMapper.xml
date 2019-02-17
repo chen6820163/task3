@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jnshu.task3.dao.CommentMapper">
+  <resultMap id="BaseResultMap" type="com.jnshu.task3.common.bean.Comment">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="w_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="content" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="nick" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="status" javaType="java.lang.Short" jdbcType="SMALLINT" />
+      <arg column="create_at" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="update_at" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="created_by" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, w_id, content, nick, status, create_at, update_at, created_by
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from comment
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectBystatusAndWid" resultMap="BaseResultMap">
+    select * from comment
+    <where>
+      <if test="status != null">
+        status=#{status}
+      </if>
+      <if test="wid != null">
+        and w_id=#{wid}
+      </if>
+    </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from comment
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.jnshu.task3.common.bean.Comment">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into comment (id, w_id, content, 
+      nick, status, create_at, 
+      update_at, created_by)
+    values (#{id,jdbcType=BIGINT}, #{w_id,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR}, 
+      #{nick,jdbcType=VARCHAR}, #{status,jdbcType=SMALLINT}, #{create_at,jdbcType=BIGINT}, 
+      #{update_at,jdbcType=BIGINT}, #{created_by,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jnshu.task3.common.bean.Comment">
+    update comment
+    <set>
+      <if test="w_id != null">
+        w_id = #{w_id,jdbcType=BIGINT},
+      </if>
+      <if test="content != null">
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="nick != null">
+        nick = #{nick,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=SMALLINT},
+      </if>
+      <if test="create_at != null">
+        create_at = #{create_at,jdbcType=BIGINT},
+      </if>
+      <if test="update_at != null">
+        update_at = #{update_at,jdbcType=BIGINT},
+      </if>
+      <if test="created_by != null">
+        created_by = #{created_by,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>
